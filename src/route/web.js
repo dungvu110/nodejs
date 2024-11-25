@@ -12,8 +12,8 @@ let initWebRoutes = (app) => {
     router.post("/post-crud", homeController.postCRUD);         //C
     router.get("/get-crud", homeController.displayGetCRUD);     //R (to view data)
     router.get("/edit-crud", homeController.getEditCRUD);       //U (to edit page)
-    router.post("/put-crud", homeController.putCRUD);            //U
-    //D
+    router.post("/put-crud", homeController.putCRUD);           //U
+    router.get("/delete-crud", homeController.deleteCRUD);      //D
 
 
     router.get("/dungvu110", (req, res) => {
