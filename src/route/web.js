@@ -16,8 +16,13 @@ let initWebRoutes = (app) => {
     router.post("/put-crud", homeController.putCRUD);           //U
     router.get("/delete-crud", homeController.deleteCRUD);      //D
 
+    //API for React
     router.post("/api/login", userController.handleLogin);
-    router.get("/api/get-all-users", userController.handleGetAllUsers);
+
+    router.get("/api/get-all-users", userController.handleGetAllUsers);//R
+    router.post("/api/create-new-user", userController.handleCreateNewUser);//C
+    router.put("/api/edit-user", userController.handleEditUser);//U
+    router.delete("/api/delete-user", userController.handleDeleteUser);//D
 
 
     router.get("/dungvu110", (req, res) => {
